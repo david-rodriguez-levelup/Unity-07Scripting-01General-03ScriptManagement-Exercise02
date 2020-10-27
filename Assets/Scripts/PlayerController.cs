@@ -2,32 +2,29 @@
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField]
-    private float _speed = 5;
 
-    [SerializeField]
-    private Rigidbody _projectil;
+    private MoveBehaviour _myMoveBehaviour;
+    private FireBehaviour _myFireBehaviour;
 
-    [SerializeField]
-    private float _projectileForce = 20;
+    private void Awake() {
+        _myMoveBehaviour = GetComponent<MoveBehaviour>();
+        _myFireBehaviour = GetComponent<FireBehaviour>();
+    }
 
     private void Update()
     {
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        var direction = new Vector3(horizontal, vertical, 0);
-        transform.Translate(direction * _speed * Time.deltaTime);
+        _myMoveBehaviour.Move(horizontal, vertical);
 
         if (Input.GetButtonDown("Fire1"))
         {
-            var projectile = Instantiate(_projectil, transform.position, Quaternion.identity);
             var mouseInput = Input.mousePosition;
             mouseInput.z = 10;
             var mousePosition = Camera.main.ScreenToWorldPoint(mouseInput);
             mousePosition.z = 0;
-            var projectileDelta = mousePosition - transform.position;
-            projectile.AddForce(projectileDelta.normalized * _projectileForce);
-        }
+            _myFireBehaviour.Fire(mousePosition);
+         }
     }
 
 }
