@@ -2,7 +2,7 @@
 
 public class PlayerController : MonoBehaviour
 {
-
+    
     private MoveBehaviour _myMoveBehaviour;
     private FireBehaviour _myFireBehaviour;
 

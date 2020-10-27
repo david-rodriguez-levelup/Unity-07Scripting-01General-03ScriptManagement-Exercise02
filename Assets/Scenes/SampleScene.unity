@@ -245,8 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c590ea482701104b8dd31f61a6eb7d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _projectil: {fileID: 7491581833757144687, guid: 0551d7f55a53b654eb00da2f6bb45d2e, type: 3}
-  _projectileForce: 400
+  _projectileData: {fileID: 11400000, guid: ded6d8f09eb6444408bc8c20cf7d0e1f, type: 2}
 --- !u!114 &456588751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bdbfa88ab7ced4b8c9f681f2769780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 10
+  speedData: {fileID: 11400000, guid: ffbc5f81f4fa2a54b947ff31c2d8e13a, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0

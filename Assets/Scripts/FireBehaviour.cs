@@ -4,15 +4,13 @@ public class FireBehaviour : MonoBehaviour
 {
     
     [SerializeField]
-    private Rigidbody _projectil;
-
-    [SerializeField]
-    private float _projectileForce = 20;
+    private ProjectileData _projectileData;
     
     public void Fire(Vector3 target) {
-        var projectile = Instantiate(_projectil, transform.position, Quaternion.identity);
+        print(_projectileData);
+        var projectile = Instantiate(_projectileData.Rigidbody, transform.position, Quaternion.identity);
         var projectileDelta = target - transform.position;
-        projectile.AddForce(projectileDelta.normalized * _projectileForce);
+        projectile.AddForce(projectileDelta.normalized * _projectileData.Force);
     }
 
 }
