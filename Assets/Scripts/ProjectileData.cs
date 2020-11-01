@@ -4,22 +4,35 @@
 public class ProjectileData : ScriptableObject
 {
 
-    [SerializeField]
-    private Rigidbody _rigidbody;
+    #region Variables
 
-    public Rigidbody Rigidbody {
+    /// <summary>
+    /// GameObject with a rigid body component.
+    /// </summary>
+    public Rigidbody Rigidbody 
+    {
         get { return _rigidbody; }
         set { _rigidbody = value; }
     }
 
-    [SerializeField]
-    private float _force = 20;
-
+    /// <summary>
+    /// Impulse of the projectile when fired.
+    /// </summary>
     public float Force 
     {
         get { return _force; }
         set { _force = value; }
-    }
+    }    
+
+    [SerializeField]
+    [Tooltip("GameObject with a rigid body component.")]
+    private Rigidbody _rigidbody;
+
+    [SerializeField]
+    [Tooltip("Impulse of the projectile when fired.")]
+    private float _force = 20;
+
+    #endregion
 
 }
 

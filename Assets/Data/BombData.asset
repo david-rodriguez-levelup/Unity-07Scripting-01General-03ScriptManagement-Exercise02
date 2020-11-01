@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bc9a8b6eac14d6498e8b92fb973fb5e, type: 3}
-  m_Name: PlayerProjectile
+  m_Name: BombData
   m_EditorClassIdentifier: 
-  _rigidbody: {fileID: 7491581833757144687, guid: 0551d7f55a53b654eb00da2f6bb45d2e, type: 3}
-  _force: 400
+  _rigidbody: {fileID: 7491581833757144687, guid: a1babadb60ff2d94cb564810bd303c27, type: 3}
+  _force: 200
