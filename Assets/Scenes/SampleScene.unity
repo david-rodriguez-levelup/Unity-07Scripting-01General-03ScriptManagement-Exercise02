@@ -258,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39bdbfa88ab7ced4b8c9f681f2769780, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedData: {fileID: 11400000, guid: ffbc5f81f4fa2a54b947ff31c2d8e13a, type: 2}
+  movingObjectData: {fileID: 11400000, guid: ffbc5f81f4fa2a54b947ff31c2d8e13a, type: 2}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,7 +362,7 @@ GameObject:
   - component: {fileID: 712049144}
   - component: {fileID: 712049145}
   m_Layer: 0
-  m_Name: ProjectileSpawnerBaseBullets
+  m_Name: BulletSpawnerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 876385991}
   - component: {fileID: 876385992}
   m_Layer: 0
-  m_Name: ProjectileSpawnerLimitedBullets
+  m_Name: BulletSpawnerLimited
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -534,7 +534,7 @@ GameObject:
   - component: {fileID: 1143323904}
   - component: {fileID: 1143323903}
   m_Layer: 0
-  m_Name: ProjectileSpawnerLimitedBombs
+  m_Name: BombSpawnerLimited
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 1918528138}
   - component: {fileID: 1918528137}
   m_Layer: 0
-  m_Name: ProjectileSpawnerBaseBombs
+  m_Name: BombSpawnerBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

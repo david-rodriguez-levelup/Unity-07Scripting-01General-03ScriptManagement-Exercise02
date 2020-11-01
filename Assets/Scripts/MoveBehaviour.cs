@@ -7,7 +7,7 @@ public class MoveBehaviour : MonoBehaviour
 
     [SerializeField]
     [Tooltip("Asset with speed data settings.")]
-    private SpeedData speedData;
+    private MovingObjectData movingObjectData;
 
     #endregion
 
@@ -22,7 +22,7 @@ public class MoveBehaviour : MonoBehaviour
     public void Move(float horizontal, float vertical, float depth) 
     {
         var direction = new Vector3(horizontal, vertical, depth);
-        transform.Translate(direction * speedData.Speed * Time.deltaTime);
+        transform.Translate(direction * movingObjectData.Speed * Time.deltaTime);
     }
 
     #endregion    
