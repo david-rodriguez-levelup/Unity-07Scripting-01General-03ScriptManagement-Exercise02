@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "SpeedData", menuName = "Data/Speed")]
-public class MovingObjectData : ScriptableObject
+public class ObjectMovementData : ScriptableObject
 {
 
     #region Variables
