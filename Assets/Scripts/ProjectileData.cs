@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(fileName = "ProjectileData", menuName = "Data/Projectile")]
+/// <summary>
+/// Stores projectile related data.
+/// </summary>
+[CreateAssetMenu(fileName = "ProjectileData", menuName = "Data/ProjectileData")]
 public class ProjectileData : ScriptableObject
 {
 
     #region Variables
 
     /// <summary>
-    /// GameObject with a rigid body component.
+    /// GameObject with a <see cref="Rigidbody"/> component to be fired.
     /// </summary>
     public Rigidbody Rigidbody 
     {
@@ -16,7 +19,7 @@ public class ProjectileData : ScriptableObject
     }
 
     /// <summary>
-    /// Impulse of the projectile when fired.
+    /// Force to apply on the projectile when fired.
     /// </summary>
     public float Force 
     {
@@ -25,11 +28,11 @@ public class ProjectileData : ScriptableObject
     }    
 
     [SerializeField]
-    [Tooltip("GameObject with a rigid body component.")]
+    [Tooltip("GameObject with a Rigidbody component.")]
     private Rigidbody _rigidbody;
 
     [SerializeField]
-    [Tooltip("Impulse of the projectile when fired.")]
+    [Tooltip("Force to apply on the projectile when fired.")]
     private float _force = 20;
 
     #endregion

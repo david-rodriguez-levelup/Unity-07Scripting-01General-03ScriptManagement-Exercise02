@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 
+/// <summary>
+/// A very simple player controller.
+/// </summary>
 public class PlayerController : MonoBehaviour
 {
     
     #region Variables
 
-    private MoveBehaviour _myMoveBehaviour;
-    
-    private FireBehaviour _myFireBehaviour;
+    // Components
+    private MoveBehaviour _moveBehaviour;
+    private FireBehaviour _fireBehaviour;
 
     #endregion
 
@@ -17,8 +20,8 @@ public class PlayerController : MonoBehaviour
     private void Awake() 
     {
         // Components
-        _myMoveBehaviour = GetComponent<MoveBehaviour>();
-        _myFireBehaviour = GetComponent<FireBehaviour>();
+        _moveBehaviour = GetComponent<MoveBehaviour>();
+        _fireBehaviour = GetComponent<FireBehaviour>();
     }
 
     private void Update()
@@ -26,12 +29,12 @@ public class PlayerController : MonoBehaviour
         // Move!
         var horizontal = Input.GetAxis("Horizontal");
         var vertical = Input.GetAxis("Vertical");
-        _myMoveBehaviour.Move(horizontal, vertical);
+        _moveBehaviour.Move(horizontal, vertical);
 
         // Fire!
         if (Input.GetButtonDown("Fire1"))
         {
-            _myFireBehaviour.Fire(GetMousePosition());
+            _fireBehaviour.Fire(GetMousePosition());
         }
     }    
 
